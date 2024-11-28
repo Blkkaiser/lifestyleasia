@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)http://127.0.0.1:5500/assets_files/ixmatch.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body marginwidth="0" marginheight="0"><script>!function(t){var e={};function r(n){if(e[n])return e[n].exports;var i=e[n]={i:n,l:!1,exports:{}};return t[n].call(i.exports,i,i.exports,r),i.l=!0,i.exports}r.m=t,r.c=e,r.d=function(t,e,n){r.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:n})},r.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},r.t=function(t,e){if(1&e&&(t=r(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var n=Object.create(null);if(r.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var i in t)r.d(n,i,function(e){return t[e]}.bind(null,i));return n},r.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return r.d(e,"a",e),e},r.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},r.p="",r(r.s=0)}([function(t,e){let r=!1;const n={};let i,a,o,c;const u={};function s(t){let e,r,n=window,i="TCF"===t?"__tcfapi":"__uspapi",a="TCF"===t?"__tcfapiLocator":"__uspapiLocator";for(;n;){try{if("function"==typeof n[i]){r=n[i],e=n;break}}catch(t){}try{if(n.frames[a]){e=n;break}}catch(t){}if(n===window.top)break;n=n.parent}return{apiFunc:r,apiFrame:e}}function p(t){let e,r;try{e="string"==typeof t.data?JSON.parse(t.data):t.data,r=e.__tcfapiReturn?e.__tcfapiReturn:e.__uspapiReturn}catch(t){}r&&r.callId&&"function"==typeof u[r.callId]&&(u[r.callId](r.returnValue,r.success),delete u[r.callId])}function l(t,e,r,n){if(t){let i="TCF"===r?"__tcfapi":"__uspapi",a="TCF"===r?2:1,o="TCF"===r?"getTCData":"getUSPData",c=i+"Call";const s=String(Math.random());e?e(o,a,n):(window[i]=function(e,r,n){const i={[c]:{command:e,version:r,callId:s}};u[s]=n,t.postMessage(i,"*")},window.addEventListener("message",p,!1),window[i](o,a,n))}else n({msg:"CMP not found"},!1)}function d(){if(!1===r){let t=`https://ssum-sec.casalemedia.com/usermatch?d=${encodeURIComponent(document.referrer)}&s=184674&cb=https%3A%2F%2Fcdn.indexww.com%2Fht%2Fhtw-pixel.gif%3F`,e=t.split("usermatch?");t=e[0]+"usermatch?",n.gdpr&&(t+=`gdpr=${n.gdpr}&gdpr_consent=${n.gdpr_consent}&`),n.us_privacy&&(t+=`us_privacy=${n.us_privacy}&`),t+=e[1];let i=document.createElement("iframe");i.setAttribute("style","display:none;"),i.setAttribute("width","0"),i.setAttribute("height","0"),i.setAttribute("frameborder","0"),i.setAttribute("marginheight","0"),i.setAttribute("marginwidth","0"),i.setAttribute("scrolling","no"),i.setAttribute("src",t),document.body.appendChild(i),r=!0}}let f=s("TCF");i=f.apiFrame,c=f.apiFunc;let m=s("USP");a=m.apiFrame,o=m.apiFunc;let g=setTimeout((function(){d()}),1e4),_=(t,e)=>{clearTimeout(g),e&&(t.tcString?(n.gdpr=t.gdprApplies?1:0,n.gdpr_consent=t.tcString):t.uspString&&(n.us_privacy=t.uspString)),i&&!n.gdpr||a&&!n.us_privacy||d()};l(i,c,"TCF",_),l(a,o,"USP",_)}]);</script><!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body></html>
